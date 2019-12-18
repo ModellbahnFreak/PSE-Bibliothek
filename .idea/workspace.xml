@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bd5a3c4-fb02-4239-aa33-d925d268c1b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/ExternalUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/LendTimeExpiredException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/LibraryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/MediaUnavaliableException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/MediaUnknownException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/MediaSeracher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/Media.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/MultiMedia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/PrintMedia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/multimedia/Podcast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/multimedia/Video.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Jounal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Newspaper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Paper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/BookCoverType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/MultiMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/MultiMedia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/PrintMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/PrintMedia.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +21,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -43,18 +30,28 @@
   </component>
   <component name="ProjectId" id="1V8ZTZUrOmlKy4uwiFWEXwjchT9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -68,18 +65,54 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576636690840</updated>
+      <workItem from="1576639501662" duration="1462000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="362" y="71" key="#Plugins" timestamp="1576640907555">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="362" y="71" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1576640907555" />
+    <state x="575" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1576640975505">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="575" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1576640975505" />
+    <state x="606" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576639668518">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="606" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1576639668518" />
+    <state x="550" y="139" key="FileChooserDialogImpl" timestamp="1576639651010">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="550" y="139" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576639651010" />
+    <state x="279" y="55" key="SettingsEditor" timestamp="1576640446651">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="279" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1576640446651" />
+    <state x="471" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1576639506368">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="471" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1576639506368" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1576640893545">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1576640893545" />
   </component>
 </project>
