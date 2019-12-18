@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bd5a3c4-fb02-4239-aa33-d925d268c1b8" name="Default Changelist" comment="" />
+    <list default="true" id="7bd5a3c4-fb02-4239-aa33-d925d268c1b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/ExternalUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/LendTimeExpiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/LibraryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/MediaUnavaliableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/exceptions/MediaUnknownException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/MediaSeracher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/Media.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/MultiMedia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/PrintMedia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/multimedia/Podcast.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/multimedia/Video.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Jounal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Newspaper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/printmedia/Paper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1V8ZTZUrOmlKy4uwiFWEXwjchT9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -33,5 +70,16 @@
       <updated>1576636690840</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
