@@ -8,27 +8,64 @@ import java.util.Optional;
 import java.util.Set;
 
 /**
- * A class representing a digital media
+ * <p>A class representing a digital media</p>
+ * <p>The digital media is stored on some network address. The link of which can be retrieved from this class.</p>
  *
  * @author Georg Reissner, Niklas Kriger
  * @version 42.101010_Christmas19
  */
 public abstract class MultiMedia implements Media {
 
-    /**title for this Multimedia*/
+    /**
+     * Title of this Multimedia
+     */
     private final String title;
 
-    /**id for this MultiMedia*/
+    /**
+     * Unique Id of this MultiMedia. Won't change during the lifetime of the media.
+     */
     private final String id;
 
     /**
-     * constructor which sets id and title
-     * @param id
-     * @param title
+     * The url where this multimedia object can be found.
      */
-    protected MultiMedia(final String id, final String title) {
+    private final String mediaUrl;
+
+    /**
+     * The length of the multi media in seconds
+     */
+    private final int lenSec;
+
+    /**
+     * The file type of the multimedia
+     */
+    private final String mimeType;
+
+    /*@
+     @ requires id != null;
+     @ requires !id.isEmpty();
+     @ requires title != null;
+     @ requires !title.isEmpty();
+     @ requires lenSec >= 0;
+     @ requires mimeType != null;
+     @ requires !mimeType.isEmpty():
+     */
+
+    /**
+     * <p>Constructor setting the id and title of the multimedia.</p>
+     *
+     * @param id       The (within the library) unique id. Mustn't be null or empty
+     * @param title    The title of the media to be displayed in the gui. Mustn't be null or empty
+     * @param mediaUrl The url where this multimedia is stored.
+     * @param lenSec   The length of the multimedia clip in seconds
+     * @param mimeType The file type of the clip
+     */
+    protected MultiMedia(final String id, final String title, final String mediaUrl, final int lenSec, final String mimeType) {
         this.id = id;
         this.title = title;
+        this.mediaUrl = mediaUrl;
+        this.lenSec = lenSec;
+        this.mimeType = mimeType;
     }
 
     /*@
@@ -36,11 +73,15 @@ public abstract class MultiMedia implements Media {
      @ ensures \result >= 0;
      @ pure;
      */
+
     /**
      * gets the length of this multimedia
+     *
      * @return the length of this MultiMedia in seconds
      */
-    abstract int getLengthSec();
+    public int getLengthSec() {
+        return this.lenSec;
+    }
 
     /*@
      @ requires true;
@@ -48,11 +89,15 @@ public abstract class MultiMedia implements Media {
      @ ensures !result.isEmpty();
      @ pure;
      */
+
     /**
      * gets the mime type of this multimedia
+     *
      * @return the mime of this MultiMedia
      */
-    abstract String getMimeType();
+    public String getMimeType() {
+        return this.mimeType;
+    }
 
     /**
      * <p>Returns the id-String of the media.</p>
@@ -62,7 +107,7 @@ public abstract class MultiMedia implements Media {
      */
     @Override
     public String getId() {
-        return this.id;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -73,7 +118,7 @@ public abstract class MultiMedia implements Media {
      */
     @Override
     public String getTitle() {
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -84,7 +129,7 @@ public abstract class MultiMedia implements Media {
      */
     @Override
     public Set<String> getAuthor() {
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -95,46 +140,96 @@ public abstract class MultiMedia implements Media {
      */
     @Override
     public Optional<Library> getParentLibrary() {
-        return Optional.empty();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * Returns weather this media object is currently available to lend.
+     *
+     * @return Weather this media can be lent
+     */
     @Override
     public boolean isAvailable() {
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * <p>Gets the {@link BibUser} who has currently lent the media</p>
+     *
+     * @return The optional of the user who has lent the media or {@link Optional#empty()} if it's not lent
+     */
     @Override
     public Optional<BibUser> getCurrentLender() {
-        return Optional.empty();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * <p>Sets the user who has currently lent the media. If the book in not lent, {@link Optional#empty()}</p>
+     *
+     * @param user The user who has lent the media or an empty optional
+     */
     @Override
     public void setCurrentLender(final Optional<BibUser> user) {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * Returns a short description of the media. This might be empty if none is available
+     *
+     * @return The short description
+     */
     @Override
     public String getShortDescription() {
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * If available, the url to a image file with the cover of the media. If there is none, the returned String might
+     * be empty. This image should be used as preview in the gui.
+     *
+     * @return The string of a url to an image with the cover
+     */
     @Override
     public String getCoverImageLink() {
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * Changes the parent library of this media object
+     *
+     * @param lib The new parent library which now owns the media
+     */
     @Override
     public void moveToLibrary(final Library lib) {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * Removes the reference to the current parent library. This won't remove the media from the set of books of the
+     * library.
+     */
     @Override
     public void removeFromLibrary() {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * Returns the date and time on which the media was taken from the library
+     *
+     * @return A {@link Date} object describing the point in time the book was taken.
+     */
     @Override
     public Date getLendDateTime() {
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
+    }
+
+    /**
+     * <p>Returns the address where this multimedia's content is stored.</p>
+     * <p>The url will only be accessible for users who have lent this media.</p>
+     *
+     * @return The String of the url where the content of this media is located.
+     */
+    public String getMediaUrl() {
+        return this.mediaUrl;
     }
 }

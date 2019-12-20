@@ -18,6 +18,7 @@ public interface Media {
      @ ensures \result != null;
      @ ensures !\result.isEmpty();
      @*/
+
     /**
      * <p>Returns the id-String of the media.</p>
      * <p>The id String is an alpha numeric combination which uniquely identifies the media across all media. The id will never change during
@@ -32,6 +33,7 @@ public interface Media {
      @ ensures \result != null;
      @ ensures !\result.isEmpty();
      @*/
+
     /**
      * <p>Returns the title of the media as String.</p>
      * <p>The title is the name under which the media is known. The title doesn't need to be unique as but it won't change during the
@@ -46,6 +48,7 @@ public interface Media {
      @ ensures \result != null;
      @ ensures !\result.contains(null);
      @*/
+
     /**
      * <p>Returns the authors of the media</p>
      * <p>The set of authors returned might be empty if the author of the media is unknown or anonymous. It can also contain more than one
@@ -60,6 +63,7 @@ public interface Media {
      @ requires true;
      @ ensures \result != null;
      @*/
+
     /**
      * <p>Returns the library this media is currently owned by.</p>
      * <p>The parent library might change if the media migrates to another library permanently. If the book is in another library
@@ -72,42 +76,89 @@ public interface Media {
     /*@
      @ requires true;
      @*/
+
+    /**
+     * Returns weather this media object is currently available to lend.
+     *
+     * @return Weather this media can be lent
+     */
     boolean isAvailable();
 
     /*@
      @ requires true;
      @ ensures \result != null;
      @*/
+
+    /**
+     * <p>Gets the {@link BibUser} who has currently lent the media</p>
+     *
+     * @return The optional of the user who has lent the media or {@link Optional#empty()} if it's not lent
+     */
     Optional<BibUser> getCurrentLender();
 
     /*@
      @ requires user != null;
      @*/
+
+    /**
+     * <p>Sets the user who has currently lent the media. If the book in not lent, {@link Optional#empty()}</p>
+     *
+     * @param user The user who has lent the media or an empty optional
+     */
     void setCurrentLender(Optional<BibUser> user);
 
     /*@
      @ requires true;
      @ ensures \result != null;
      @*/
+
+    /**
+     * Returns a short description of the media. This might be empty if none is available
+     *
+     * @return The short description
+     */
     String getShortDescription();
 
     /*@
      @ requires true;
      @ ensures \result != null;
      @*/
+
+    /**
+     * If available, the url to a image file with the cover of the media. If there is none, the returned String might
+     * be empty. This image should be used as preview in the gui.
+     *
+     * @return The string of a url to an image with the cover
+     */
     String getCoverImageLink();
 
     /*@
      @ requires lib != null;
      @ ensures getParentLibrary().get() == lib;
      @*/
+
+    /**
+     * Changes the parent library of this media object
+     *
+     * @param lib The new parent library which now owns the media
+     */
     void moveToLibrary(Library lib);
 
     /*@
      @ requires true;
      @ ensures getParentLibrary).isEmpty();
      */
+
+    /**
+     * Removes the reference to the current parent library. This won't remove the media from the set of books of the
+     * library.
+     */
     void removeFromLibrary();
 
+    /**
+     * Returns the date and time on which the media was taken from the library
+     *
+     * @return A {@link Date} object describing the point in time the book was taken.
+     */
     Date getLendDateTime();
 }
