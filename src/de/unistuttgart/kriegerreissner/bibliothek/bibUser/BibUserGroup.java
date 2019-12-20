@@ -34,6 +34,9 @@ public enum BibUserGroup {
      */
     private final int lendingDays;
 
+    /*@
+     @ ensures this.lendingDays == lendingDays;
+     @*/
     /**
      * Constructor for the enum instances. Will initialize {@link BibUserGroup#lendingDays}
      *
@@ -43,6 +46,9 @@ public enum BibUserGroup {
         this.lendingDays = lendingDays;
     }
 
+    /*@
+     @ requires true;
+     @*/
     /**
      * <p>Returns the maximum lending duration for that user group.</p>
      * <p>The returned value is the max lending duration in days if it is >= 0. If the returned value is < 0, the maximum lending duration for that group is indefinite.</p>

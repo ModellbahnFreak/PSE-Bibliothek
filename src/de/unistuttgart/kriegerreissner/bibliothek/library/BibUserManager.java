@@ -19,11 +19,19 @@ import java.util.Set;
  */
 public class BibUserManager {
 
+    /*@
+     @ public instance invariant users != null;
+     @*/
+
     /**
      * The set of al users authorized to use the library.
      */
     private final Set<BibUser> users;
 
+    /*@
+     @ requires true;
+     @ ensures this.users != null;
+     */
     /**
      * <p>Initializes the User manager with an empty set of users</p>
      */
@@ -31,6 +39,13 @@ public class BibUserManager {
         this.users = new HashSet<>();
     }
 
+    /*@
+     @ requires username != null;
+     @ requires !username.isEmpty);
+     @ requires displayName != null;
+     @ requires !displayName.isEmpty();
+     @ requires group != null;
+     @*/
     /**
      * <p>Creates a new user with the specified data.</p>
      * <p>The specified username, displayName and group will be used to create a new user and add it to the set of
@@ -41,9 +56,20 @@ public class BibUserManager {
      * @param group       The {@link BibUserGroup} the new user should be assigned to.
      */
     void newUser(final String username, final String displayName, final BibUserGroup group) {
+        assert username != null;
+        assert !username.isEmpty();
+        assert displayName != null;
+        assert !displayName.isEmpty();
+        assert group != null;
+
         this.users.add(BibUserFactory.createUser(username, displayName, group, this.users));
     }
 
+    /*@
+     @ requires true;
+     @ ensures \result != null;
+     @ ensures \result (is an unmodifiable set);
+     @*/
     /**
      * <p>Returns all users of this {@link BibUserManager} as unmodifiable set</p>
      * <p>The set will be unmodifiable, but the user objects can be changed, so it is possible to update data for the
@@ -55,6 +81,13 @@ public class BibUserManager {
         return Collections.unmodifiableSet(this.users);
     }
 
+    /*@
+     @ requires username != null;
+     @ requires !username.isEmpty();
+     @ ensures \result != null;
+     @ ensures (this.users contains a user with the username username) ==> \result.isPresent();
+     @ ensures (this.users does not contain a user with the username username) ==> \result.isEmpty();
+     @*/
     /**
      * <p>Tries to find the user specified by the given username.</p>
      * <p>If found, the user with the given username will be returned (max. 1 as the username must be unique within
@@ -68,6 +101,13 @@ public class BibUserManager {
         throw new UnsupportedOperationException("Not implemented");
     }
 
+    /*@
+     @ requires id != null;
+     @ requires !id.isEmpty();
+     @ ensures \result != null;
+     @ ensures (this.users contains a user with the id id) ==> \result.isPresent();
+     @ ensures (this.users does not contain a user with the id id) ==> \result.isEmpty();
+     @*/
     /**
      * <p>Tries to find the user specified by the given id.</p>
      * <p>If found, the user with the given id will be returned (max. 1 as the id must be unique within
@@ -81,6 +121,13 @@ public class BibUserManager {
         throw new UnsupportedOperationException("Not implemented");
     }
 
+    /*@
+     @ requires displayName != null;
+     @ requires !displayName.isEmpty();
+     @ ensures \result != null;
+     @ ensures (this.users contains a user with the displayName displayName) ==> \result.isPresent();
+     @ ensures (this.users does not contain a user with the displayName displayName) ==> \result.isEmpty();
+     @*/
     /**
      * <p>Tries to find all users with the given display name.</p>
      * <p>The returned set will contain all users, who's display name contains or is equal to the given display name.

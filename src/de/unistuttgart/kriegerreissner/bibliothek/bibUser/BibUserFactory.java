@@ -9,8 +9,22 @@ import java.util.Set;
  * @author Georg Reissner, Niklas Kriger
  * @version 42.101010_Christmas19
  */
-public class BibUserFactory {
+public final class BibUserFactory {
 
+    /**
+     * private constructor to prevent creation
+     */
+    private BibUserFactory() {
+
+    }
+
+    /*@
+     @ requires username != null;
+     @ requires !username.isEmpty();
+     @ requires displayName != null;
+     @ requires !displayName.isEmpty();
+     @ requires knownUsers != null;
+     @*/
     /**
      * <p>Creates a new {@link BibUser} with the group {@link BibUserGroup#STUDENT}.</p>
      * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
@@ -21,9 +35,26 @@ public class BibUserFactory {
      * @return A new instance of the {@link BibUser} class with the group {@link BibUserGroup#STUDENT} and the given username, displayName and generated id set.
      */
     public static BibUser createStudent(final String username, final String displayName, final Set<BibUser> knownUsers) {
+        if (username == null || username.isEmpty()) {
+            throw new IllegalArgumentException("username must not be null or empty");
+        }
+        if (displayName == null || displayName.isEmpty()) {
+            throw new IllegalArgumentException("displayName must not be null or empty");
+        }
+        if (knownUsers == null) {
+            throw new IllegalArgumentException("knownUsers must not be null");
+        }
+
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
+    /*@
+     @ requires username != null;
+     @ requires !username.isEmpty();
+     @ requires displayName != null;
+     @ requires !displayName.isEmpty();
+     @ requires knownUsers != null;
+     @*/
     /**
      * <p>Creates a new {@link BibUser} with the group {@link BibUserGroup#EMPLOYEE}.</p>
      * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
@@ -34,9 +65,26 @@ public class BibUserFactory {
      * @return A new instance of the {@link BibUser} class with the group {@link BibUserGroup#EMPLOYEE} and the given username, displayName and generated id set.
      */
     public static BibUser createEmployee(final String username, final String displayName, final Set<BibUser> knownUsers) {
+        if (username == null || username.isEmpty()) {
+            throw new IllegalArgumentException("username must not be null or empty");
+        }
+        if (displayName == null || displayName.isEmpty()) {
+            throw new IllegalArgumentException("displayName must not be null or empty");
+        }
+        if (knownUsers == null) {
+            throw new IllegalArgumentException("knownUsers must not be null");
+        }
+
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
+    /*@
+     @ requires username != null;
+     @ requires !username.isEmpty();
+     @ requires displayName != null;
+     @ requires !displayName.isEmpty();
+     @ requires knownUsers != null;
+     @*/
     /**
      * <p>Creates a new {@link BibUser} with the group {@link BibUserGroup#EXTERNAL}.</p>
      * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
@@ -47,9 +95,26 @@ public class BibUserFactory {
      * @return A new instance of the {@link BibUser} class with the group {@link BibUserGroup#EXTERNAL} and the given username, displayName and generated id set.
      */
     public static BibUser createExternal(final String username, final String displayName, final Set<BibUser> knownUsers) {
+        if (username == null || username.isEmpty()) {
+            throw new IllegalArgumentException("username must not be null or empty");
+        }
+        if (displayName == null || displayName.isEmpty()) {
+            throw new IllegalArgumentException("displayName must not be null or empty");
+        }
+        if (knownUsers == null) {
+            throw new IllegalArgumentException("knownUsers must not be null");
+        }
+
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
+    /*@
+     @ requires username != null;
+     @ requires !username.isEmpty();
+     @ requires displayName != null;
+     @ requires !displayName.isEmpty();
+     @ requires knownUsers != null;
+     @*/
     /**
      * <p>Creates a new {@link BibUser} with the given group.</p>
      * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
@@ -61,6 +126,16 @@ public class BibUserFactory {
      * @return A new instance of the {@link BibUser} class with the group {@link BibUserGroup#EXTERNAL} and the given username, displayName and generated id set.
      */
     public static BibUser createUser(final String username, final String displayName, final BibUserGroup group, final Set<BibUser> knownUsers) {
+        if (username == null || username.isEmpty()) {
+            throw new IllegalArgumentException("username must not be null or empty");
+        }
+        if (displayName == null || displayName.isEmpty()) {
+            throw new IllegalArgumentException("displayName must not be null or empty");
+        }
+        if (knownUsers == null) {
+            throw new IllegalArgumentException("knownUsers must not be null");
+        }
+
         throw new UnsupportedOperationException("Not implemented yet");
     }
 }

@@ -4,6 +4,9 @@ import de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnavailableExc
 import de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnknownException;
 import de.unistuttgart.kriegerreissner.bibliothek.media.Media;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * <p>Class for managing the media of a library.</p>
  * <p>This class enables a library to manage the owned library. This includes adding and removing media from the set
@@ -14,6 +17,17 @@ import de.unistuttgart.kriegerreissner.bibliothek.media.Media;
  * @version 42.101010_Christmas19
  */
 public class MediaManager {
+
+    /*@
+     @ public instance invariant medias != null;
+     @*/
+
+    private final Set<Media> medias = new HashSet<>();
+
+    /*@
+     @ requires media != null;
+     @ ensures !this.medias.contains(media);
+     @*/
     /**
      * <p>Removes the given media object from the library.</p>
      * <p>This method removes the given media object from the library, if it is owned by the library and currently
@@ -27,6 +41,10 @@ public class MediaManager {
         throw new UnsupportedOperationException("Not implemented");
     }
 
+    /*@
+     @ requires media != null;
+     @ ensures this.medias.contains(media);
+     @*/
     /**
      * <p>Adds a new media to the collection of the library</p>
      * <p>This method will add the given media to the collection of the library, given it is not already part of it.
@@ -39,6 +57,9 @@ public class MediaManager {
         throw new UnsupportedOperationException("Not implemented");
     }
 
+    /*@
+     @ requires media != null;
+     @*/
     /**
      * <p></p>
      *

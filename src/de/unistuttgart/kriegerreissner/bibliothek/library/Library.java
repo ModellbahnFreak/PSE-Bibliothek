@@ -17,6 +17,17 @@ import java.util.Set;
  * @version 42.101010_Christmas19
  */
 public class Library {
+
+    /*@
+     @ public instance invariant this.libraryName != null;
+     @ public instance invariant !this.libraryName.isEmpty();
+     @ public instance invariant this.currentBalance >= 0;
+     @ public instance invariant this.inventory != null;
+     @ public instance invariant this.availableMedia != null;
+     @ public instance invariant searchTool != null;
+     @ public instance invariant userManager != null;
+     @*/
+
     /**
      * The display name of the library used on the gui. This can't change during the lifetime of the library.
      */
@@ -50,6 +61,16 @@ public class Library {
      */
     private int currentBalance;
 
+    /*@
+     @ requires libraryName != null;
+     @ !requires libraryName.isEmpty();
+     @ ensures this.libraryName == libraryName;
+     @ ensures this.currentBalance == 0;
+     @ ensures this.inventory != null;
+     @ ensures this.availableMedia != null;
+     @ ensures searchTool != null;
+     @ ensures userManager != null;
+     @*/
     /**
      * <p>Initialized a library with the given display name.</p>
      * <p>The currentBalance is set to 0 and the inventory is initialized empty.</p>
@@ -59,8 +80,24 @@ public class Library {
      */
     public Library(final String libraryName) {
         this(libraryName, 0);
+
+        if (libraryName == null || libraryName.isEmpty()) {
+            throw new IllegalArgumentException("The given library displayName was null or empty");
+        }
     }
 
+    /*@
+     @ requires libraryName != null;
+     @ !requires libraryName.isEmpty();
+     @ requires currentBalance >= 0;
+     @ ensures this.libraryName == libraryName;
+     @ ensures this.currentBalance == currentBalance;
+     @ ensures this.currentBalance >= 0;
+     @ ensures this.inventory != null;
+     @ ensures this.availableMedia != null;
+     @ ensures searchTool != null;
+     @ ensures userManager != null;
+     @*/
     /**
      * <p>Initialized a library with the given display name and the given balance.</p>
      * <p>The libraries inventory is initialized empty.</p>
@@ -73,6 +110,10 @@ public class Library {
         if (libraryName == null || libraryName.isEmpty()) {
             throw new IllegalArgumentException("The given library displayName was null or empty");
         }
+        if (currentBalance < 0) {
+            throw new IllegalArgumentException("currentBalance must be >= 0");
+        }
+
         this.libraryName = libraryName;
         this.currentBalance = currentBalance;
         this.inventory = new HashSet<>();
@@ -81,15 +122,24 @@ public class Library {
         this.userManager = new BibUserManager();
     }
 
+    /*@
+     @ requires amount >= 0;
+     @ requires amount <= this.currentBalance;
+     @ ensures this.currentBalance == (\old(this.currentBalance) - amount);
+     */
     /**
      * <p>Removes the given amount of money from the current balance</p>
      * <p>If th balance is greater or equal the given amount, the given amount of money will be subtracted from the
      * current balance. If the current balance isn't high enough, an {@link IllegalArgumentException} ist trown</p>
      *
-     * @param amount The amount of money (currency of your choice) to subrtact must be greater or equal to 0 and
+     * @param amount The amount of money (currency of your choice) to subtract must be greater or equal to 0 and
      *               smaller or equal to the current balance of the library.
      */
-    void useMoney(final int amount) {
+    public void useMoney(final int amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("amount must be >= 0");
+        }
+
         if (amount <= this.currentBalance) {
             this.currentBalance -= amount;
         } else {
