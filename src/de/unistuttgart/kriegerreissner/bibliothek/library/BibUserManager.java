@@ -13,6 +13,9 @@ import java.util.Set;
  * <p>Class to manage all library users</p>
  * <p>This class manages users of a {@link Library}. It's possible to add, remove, modify users. Users can be
  * searched for by a few different methods.</p>
+ *
+ * @author Georg Reissner, Niklas Kriger
+ * @version 42.101010_Christmas19
  */
 public class BibUserManager {
 

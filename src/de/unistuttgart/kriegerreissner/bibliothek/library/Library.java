@@ -1,7 +1,5 @@
 package de.unistuttgart.kriegerreissner.bibliothek.library;
 
-import de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnavaliableException;
-import de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnknownException;
 import de.unistuttgart.kriegerreissner.bibliothek.media.Media;
 
 import java.util.HashSet;
@@ -14,6 +12,9 @@ import java.util.Set;
  * missing etc.)</p>
  * <p>Furthermore the library has a balance which is increased when users pay penalty fees for not returning a book
  * on time. A library also has a display name which ill be used on the gui to represent the library.</p>
+ *
+ * @author Georg Reissner, Niklas Kriger
+ * @version 42.101010_Christmas19
  */
 public class Library {
     /**
@@ -78,31 +79,6 @@ public class Library {
         this.availableMedia = new HashSet<>();
         this.searchTool = new MediaSearcher(this.inventory, this.availableMedia);
         this.userManager = new BibUserManager();
-    }
-
-    /**
-     * <p>Removes the given media object from the library.</p>
-     * <p>This method removes the given media object from the library, if it is owned by the library and currently
-     * available.</p>
-     *
-     * @param media The media object to remove from the inventory of the library.
-     * @throws MediaUnavaliableException If the media provided is currently not available.
-     * @throws MediaUnknownException     If the media provided isn't owned by this library
-     */
-    void removeMedia(final Media media) throws MediaUnavaliableException, MediaUnknownException {
-        throw new UnsupportedOperationException("Not implemented");
-    }
-
-    /**
-     * <p>Adds a new media to the collection of the library</p>
-     * <p>This method will add the given media to the collection of the library, given it is not already part of it.
-     * The parent Library tag of the given media object will be set to point to this library
-     * </p>
-     *
-     * @param media The media to add to the library
-     */
-    void addNewMedia(final Media media) {
-        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**

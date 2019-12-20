@@ -1,7 +1,13 @@
 package de.unistuttgart.kriegerreissner.bibliothek.media;
 
-public interface PrintMedia extends Media {
-    int getNumPages();
-    BookCoverType getCoverType();
-    String getShelfNumber();
+/**
+ * @author Georg Reissner, Niklas Kriger
+ * @version 42.101010_Christmas19
+ */
+public abstract class PrintMedia implements Media {
+    abstract int getNumPages();
+
+    abstract BookCoverType getCoverType();
+
+    abstract String getShelfNumber();
 }
