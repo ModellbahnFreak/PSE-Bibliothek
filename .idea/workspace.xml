@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bd5a3c4-fb02-4239-aa33-d925d268c1b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/saveactions_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUserGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/BibUserManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/MediaStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/run/TestLibrary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/BibUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/ExternalUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/bibUser/Student.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/MediaSeracher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/MediaSeracher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/media/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/MediaSeracher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/unistuttgart/kriegerreissner/bibliothek/library/MediaSearcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PE-Projekte/PE_PackageCalculator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bibliothek.uml" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -78,7 +67,7 @@
       <workItem from="1576639501662" duration="2179000" />
       <workItem from="1576684636419" duration="30000" />
       <workItem from="1576799641324" duration="2430000" />
-      <workItem from="1576802449450" duration="5562000" />
+      <workItem from="1576802449450" duration="6275000" />
     </task>
     <task id="LOCAL-00001" summary="Added methods to Users">
       <created>1576641018119</created>
@@ -87,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576641018119</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added even more sh** and commented">
+      <created>1576810508848</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576810508848</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,7 +104,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added methods to Users" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added methods to Users" />
+    <MESSAGE value="Added even more sh** and commented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added even more sh** and commented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="362" y="71" key="#Plugins" timestamp="1576808029792">
@@ -127,22 +124,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="298" width="559" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1576800344565" />
-    <state x="384" y="7" key="CommitChangelistDialog2" timestamp="1576641013775">
+    <state x="384" y="7" key="CommitChangelistDialog2" timestamp="1576810504088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="384" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576641013775" />
-    <state x="550" y="139" key="FileChooserDialogImpl" timestamp="1576802952145">
+    <state x="384" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576810504088" />
+    <state x="432" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1576810629963">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="550" y="139" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576802952145" />
+    <state x="432" y="0" key="Diagram.Print.Preview.Dialog/0.0.1536.824@0.0.1536.824" timestamp="1576810629963" />
+    <state x="550" y="139" key="FileChooserDialogImpl" timestamp="1576810837446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="550" y="139" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576810837446" />
     <state x="279" y="0" key="SettingsEditor" timestamp="1576809850598">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1576809850598" />
-    <state x="362" y="146" key="Vcs.Push.Dialog.v2" timestamp="1576641023592">
+    <state x="362" y="146" key="Vcs.Push.Dialog.v2" timestamp="1576810516131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="362" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1576641023592" />
+    <state x="362" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1576810516131" />
     <state x="471" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1576639506368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -151,9 +152,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="396" y="0" width="744" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1576801075187" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1576808291582">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1576810924072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1576808291582" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1576810924072" />
   </component>
 </project>

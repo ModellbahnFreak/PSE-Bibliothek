@@ -34,10 +34,10 @@ public class Library {
     private final Set<Media> availableMedia;
 
     /**
-     * Instance of the {@link MediaSeracher} class responsible for finding the correct media object to a given query.
+     * Instance of the {@link MediaSearcher} class responsible for finding the correct media object to a given query.
      * Will never change during the lifetime
      */
-    private final MediaSeracher searchTool;
+    private final MediaSearcher searchTool;
 
     /**
      * Instance of the user Manager, whiche cares about the users, so this class won't have to.
@@ -76,8 +76,8 @@ public class Library {
         this.currentBalance = currentBalance;
         this.inventory = new HashSet<>();
         this.availableMedia = new HashSet<>();
-        this.searchTool = new MediaSeracher(this.inventory, this.availableMedia);
-		this.userManager = new BibUserManager();
+        this.searchTool = new MediaSearcher(this.inventory, this.availableMedia);
+        this.userManager = new BibUserManager();
     }
 
     /**
@@ -90,13 +90,29 @@ public class Library {
      * @throws MediaUnknownException     If the media provided isn't owned by this library
      */
     void removeMedia(final Media media) throws MediaUnavaliableException, MediaUnknownException {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * <p>Adds a new media to the collection of the library</p>
+     * <p>This method will add the given media to the collection of the library, given it is not already part of it.
+     * The parent Library tag of the given media object will be set to point to this library
+     * </p>
+     *
+     * @param media The media to add to the library
+     */
     void addNewMedia(final Media media) {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
+    /**
+     * <p>Removes the given amount of money from the current balance</p>
+     * <p>If th balance is greater or equal the given amount, the given amount of money will be subtracted from the
+     * current balance. If the current balance isn't high enough, an {@link IllegalArgumentException} ist trown</p>
+     *
+     * @param amount The amount of money (currency of your choice) to subrtact must be greater or equal to 0 and
+     *               smaller or equal to the current balance of the library.
+     */
     void useMoney(final int amount) {
         if (amount <= this.currentBalance) {
             this.currentBalance -= amount;
