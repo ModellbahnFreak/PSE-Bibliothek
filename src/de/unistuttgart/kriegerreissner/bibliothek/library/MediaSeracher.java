@@ -6,17 +6,23 @@ import java.util.Optional;
 import java.util.Set;
 
 public class MediaSeracher {
-	private Set<Media> searchList;
+	private final Set<Media> libInventory;
+	private final Set<Media> libAvailable;
 
-	public Optional<Media> findMediaById(String mediaId) {
+    public MediaSeracher(final Set<Media> inventory, final Set<Media> availableMedia) {
+		this.libInventory = inventory;
+		this.libAvailable = availableMedia;
+    }
+
+    public Optional<Media> findMediaById(final String mediaId) {
 		return null;
 	}
 
-	public Set<Media> findMediaByTitle(String title) {
+	public Set<Media> findMediaByTitle(final String title) {
 		return null;
 	}
 
-	public Set<Media> findMediaByAuthor(String autor) {
+	public Set<Media> findMediaByAuthor(final String autor) {
 		return null;
 	}
 }
