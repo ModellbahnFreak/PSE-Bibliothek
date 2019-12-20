@@ -8,14 +8,24 @@ import java.util.Optional;
 import java.util.Set;
 
 /**
+ * A class representing a digital media
+ *
  * @author Georg Reissner, Niklas Kriger
  * @version 42.101010_Christmas19
  */
 public abstract class MultiMedia implements Media {
 
+    /**title for this Multimedia*/
     private final String title;
+
+    /**id for this MultiMedia*/
     private final String id;
 
+    /**
+     * constructor which sets id and title
+     * @param id
+     * @param title
+     */
     protected MultiMedia(final String id, final String title) {
         this.id = id;
         this.title = title;
@@ -24,6 +34,11 @@ public abstract class MultiMedia implements Media {
     /*@
      @ requires true;
      @ ensures \result >= 0;
+     @ pure;
+     */
+    /**
+     * gets the length of this multimedia
+     * @return the length of this MultiMedia in seconds
      */
     abstract int getLengthSec();
 
@@ -31,6 +46,11 @@ public abstract class MultiMedia implements Media {
      @ requires true;
      @ ensures \result != null;
      @ ensures !result.isEmpty();
+     @ pure;
+     */
+    /**
+     * gets the mime type of this multimedia
+     * @return the mime of this MultiMedia
      */
     abstract String getMimeType();
 

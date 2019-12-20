@@ -19,6 +19,7 @@ public class BibUser {
 	 @ public instance invariant username != null;
 	 @ public instance invariant !username.isEmpty();
 	 @ public instance invariant lentBooks != null;
+	 @ public instance invariant group != null;
 	 */
 
     private final String id;
@@ -27,6 +28,16 @@ public class BibUser {
     private final Set<Media> lentBooks;
     private BibUserGroup group;
 
+
+    /*@
+	 @ requires username != null;
+	 @ requires !username.isEmpty();
+	 @ requires displayName != null;
+	 @ requires !displayName.isEmpty();
+	 @ requires id != null;
+	 @ requires !id.isEmpty();
+	 @ requires group != null;
+	 @*/
     /**
      * <p>Initializes a new User with the given date</p>
      * <p>Sets the id, username and displayName of the user to the given values. The username and the id will never change after being initialized. other properties of a user can be changed.</p>
@@ -34,6 +45,7 @@ public class BibUser {
      * @param username    The username of the new user which identifies his account
      * @param displayName The name of the user to be displayed for others
      * @param id          The unique user id. This won't be checked.
+     * @param group       The bib user group.
      */
     BibUser(final String username, final String displayName, final String id, final BibUserGroup group) {
         assert username != null;
@@ -42,6 +54,7 @@ public class BibUser {
         assert !displayName.isEmpty();
         assert id != null;
         assert !id.isEmpty();
+        assert group != null;
 
         this.username = username;
         this.displayName = displayName;
@@ -50,14 +63,7 @@ public class BibUser {
         this.group = group;
     }
 
-	/*@
-	 @ requires username != null;
-	 @ requires !username.isEmpty();
-	 @ requires displayName != null;
-	 @ requires !displayName.isEmpty();
-	 @ requires id != null;
-	 @ requires !id.isEmpty();
-	 @*/
+
 
     /**
      * <p>Adds the given media to the collection of medias currently lent by the user</p>
@@ -72,7 +78,6 @@ public class BibUser {
 	/*@
 	 @ requires media != null;
 	 @*/
-
     /**
      * <p>Returns the given media</p>
      * <p>Removes the media from the list of lent media and tells the media it's no longer lent.</p>
@@ -85,8 +90,8 @@ public class BibUser {
 
 	/*@
 	 @ requires media != null;
+	 @ assignable media;
 	 @*/
-
     /**
      * <p>Returns an unmodifiable set of currently lent books</p>
      * <p>The set will be unmodifiable so interacting with it won't affect the lent books.</p>
@@ -101,8 +106,8 @@ public class BibUser {
 	 @ requires true;
 	 @ ensures \result != null;
 	 @ ensures \result (is unmodifiable);
+	 @ pure;
 	 @*/
-
     /**
      * <p>Returns how many days the user has left to return this specific media</p>
      *
@@ -116,7 +121,6 @@ public class BibUser {
 	/*@
 	 @ requires media != null;
 	 @*/
-
     /**
      * <p>Returns how much the user still must pay.</p>
      * <p>This is the sum of how much he must pay for the usage plus the penalties for not returning media on time.</p>
@@ -130,8 +134,8 @@ public class BibUser {
 	/*@
 	 @ requires true;
 	 @ ensures \result >= 0;
+	 @ assignable amount
 	 @*/
-
     /**
      * <p>Pays the given amount</p>
      * <p>If the user has to pay money (see {@link BibUser#getOpenPayments()} it can be payed with this method.</p>
@@ -144,8 +148,8 @@ public class BibUser {
 
 	/*@
 	 @ requires amount >= 0;
+	 @ pure;
 	 @*/
-
     /**
      * <p>Returns the ID of the user. This won't change and will always be the same and unique</p>
      *
@@ -158,8 +162,8 @@ public class BibUser {
 	/*@
 	 @ requires true;
 	 @ ensures \result != null;
+	 @ pure;
 	 @*/
-
     /**
      * <p>Returns the display name of the user</p>
      * <p>The display name of the user is the name displayed in the gui and shown to others. It's not neccesariry
@@ -170,6 +174,12 @@ public class BibUser {
         return this.displayName;
     }
 
+    /*@
+     @ requires true;
+     @ ensures \result != null;
+     @ ensures !\result.isEmpty();
+     @ pure;
+     @*/
     /**
      * <p>Return the unique id of the library user.</p>
      * <p>The id is set once when the user is initialized and remains the same during the whole lifetime of this
@@ -181,6 +191,11 @@ public class BibUser {
         return this.id;
     }
 
+    /*@
+     @ requires true;
+     @ ensures \result != null;
+     @ pure;
+     */
     /**
      * <p>returns the group the user is currently in.</p>
      * <p>The group defines what the user can do in the library. E.g. how long he is allowed to lend media for.</p>
@@ -191,6 +206,11 @@ public class BibUser {
         return this.group;
     }
 
+    /*@
+     @ requires group != nul;
+     @ ensures this.group == group;
+     @ assignable group;
+     @*/
     /**
      * <p>Up- or downgrades the users group.</p>
      * <p>The group defines what the user can do in the library. E.g. how long he is allowed to lend media for. Up-
@@ -202,9 +222,18 @@ public class BibUser {
      * @param group The new group which the user should be assigned to.
      */
     public void setGroup(final BibUserGroup group) {
+        if (group == null) {
+            throw new IllegalArgumentException("group must not be null");
+        }
         this.group = group;
     }
 
+    /*@
+     @ requires true;
+     @ ensures \result != null;
+     @ ensures !\result.isEmpty();
+     @ pure;
+     */
     /**
      * <p>Returns a String representation of the user and some information about him</p>
      * <p>The string will be of the pattern "User [displayName] ([username]); currently lent [booksLent] media.

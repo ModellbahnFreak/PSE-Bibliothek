@@ -126,6 +126,7 @@ public class Library {
      @ requires amount >= 0;
      @ requires amount <= this.currentBalance;
      @ ensures this.currentBalance == (\old(this.currentBalance) - amount);
+     @ assignable currentBalance;
      */
     /**
      * <p>Removes the given amount of money from the current balance</p>

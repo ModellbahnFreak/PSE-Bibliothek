@@ -48,6 +48,7 @@ public enum BibUserGroup {
 
     /*@
      @ requires true;
+     @ pure;
      @*/
     /**
      * <p>Returns the maximum lending duration for that user group.</p>

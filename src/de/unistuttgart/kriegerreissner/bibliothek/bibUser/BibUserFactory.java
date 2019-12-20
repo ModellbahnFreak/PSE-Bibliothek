@@ -4,7 +4,8 @@ import java.util.Set;
 
 /**
  * <p>Factory class for creating and managing users and their groups</p>
- * <p>The {@link BibUserFactory} offers operations fr creating a new {@link BibUser} of a certain user group. It will also take care of generating a new unique id for the user and it will check if the username already exists</p>
+ * <p>The {@link BibUserFactory} offers operations fr creating a new {@link BibUser} of a certain user group. It will also take care of
+ * generating a new unique id for the user and it will check if the username already exists</p>
  *
  * @author Georg Reissner, Niklas Kriger
  * @version 42.101010_Christmas19
@@ -24,10 +25,12 @@ public final class BibUserFactory {
      @ requires displayName != null;
      @ requires !displayName.isEmpty();
      @ requires knownUsers != null;
+     @ pure;
      @*/
     /**
      * <p>Creates a new {@link BibUser} with the group {@link BibUserGroup#STUDENT}.</p>
-     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
+     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the
+     * given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
      *
      * @param username    The username to set for the new user. Must be unique.
      * @param displayName The name which to display for the user in the GUI
@@ -54,10 +57,12 @@ public final class BibUserFactory {
      @ requires displayName != null;
      @ requires !displayName.isEmpty();
      @ requires knownUsers != null;
+     @ pure;
      @*/
     /**
      * <p>Creates a new {@link BibUser} with the group {@link BibUserGroup#EMPLOYEE}.</p>
-     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
+     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the
+     * given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
      *
      * @param username    The username to set for the new user. Must be unique.
      * @param displayName The name which to display for the user in the GUI
@@ -84,10 +89,12 @@ public final class BibUserFactory {
      @ requires displayName != null;
      @ requires !displayName.isEmpty();
      @ requires knownUsers != null;
+     @ pure;
      @*/
     /**
      * <p>Creates a new {@link BibUser} with the group {@link BibUserGroup#EXTERNAL}.</p>
-     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
+     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists
+     * in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
      *
      * @param username    The username to set for the new user. Must be unique.
      * @param displayName The name which to display for the user in the GUI
@@ -114,10 +121,12 @@ public final class BibUserFactory {
      @ requires displayName != null;
      @ requires !displayName.isEmpty();
      @ requires knownUsers != null;
+     @ pure;
      @*/
     /**
      * <p>Creates a new {@link BibUser} with the given group.</p>
-     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
+     * <p>The method will check if the username exists. If so, it will throw an {@link IllegalArgumentException} if the username already exists
+     * in the given list o known users. Furthermore a new unique id will be created which doesn't exist in the list of known users.</p>
      *
      * @param username    The username to set for the new user. Must be unique.
      * @param displayName The name which to display for the user in the GUI

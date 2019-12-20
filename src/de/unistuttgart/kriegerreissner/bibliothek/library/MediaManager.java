@@ -59,13 +59,15 @@ public class MediaManager {
 
     /*@
      @ requires media != null;
+     @ pure;
      @*/
     /**
-     * <p></p>
+     * checks if the media is available
      *
-     * @param media
+     * @param media the media to search for
+     * @return true if the media is available, otherwise false
      */
-    void isMediaAvailable(final Media media) {
+    boolean isMediaAvailable(final Media media) {
         throw new UnsupportedOperationException("Not implemented");
     }
 }

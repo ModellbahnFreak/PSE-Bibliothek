@@ -69,6 +69,7 @@ public class BibUserManager {
      @ requires true;
      @ ensures \result != null;
      @ ensures \result (is an unmodifiable set);
+     @ pure;
      @*/
     /**
      * <p>Returns all users of this {@link BibUserManager} as unmodifiable set</p>
@@ -87,6 +88,7 @@ public class BibUserManager {
      @ ensures \result != null;
      @ ensures (this.users contains a user with the username username) ==> \result.isPresent();
      @ ensures (this.users does not contain a user with the username username) ==> \result.isEmpty();
+     @ pure;
      @*/
     /**
      * <p>Tries to find the user specified by the given username.</p>
@@ -107,6 +109,7 @@ public class BibUserManager {
      @ ensures \result != null;
      @ ensures (this.users contains a user with the id id) ==> \result.isPresent();
      @ ensures (this.users does not contain a user with the id id) ==> \result.isEmpty();
+     @ pure;
      @*/
     /**
      * <p>Tries to find the user specified by the given id.</p>
@@ -127,6 +130,7 @@ public class BibUserManager {
      @ ensures \result != null;
      @ ensures (this.users contains a user with the displayName displayName) ==> \result.isPresent();
      @ ensures (this.users does not contain a user with the displayName displayName) ==> \result.isEmpty();
+     @ pure;
      @*/
     /**
      * <p>Tries to find all users with the given display name.</p>
