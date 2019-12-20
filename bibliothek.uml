@@ -3,95 +3,104 @@
   <ID>JAVA</ID>
   <OriginalElement>de.unistuttgart.kriegerreissner.bibliothek</OriginalElement>
   <nodes>
-    <node x="1483.0" y="1070.0">de.unistuttgart.kriegerreissner.bibliothek.bibUser.BibUserGroup</node>
-    <node x="588.0" y="1269.0">de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnknownException</node>
-    <node x="0.0" y="1582.0">de.unistuttgart.kriegerreissner.bibliothek.media.BookCoverType</node>
-    <node x="1134.0" y="1070.0">de.unistuttgart.kriegerreissner.bibliothek.library.BibUserManager</node>
-    <node x="272.0" y="972.0">de.unistuttgart.kriegerreissner.bibliothek.media.multimedia.Podcast</node>
-    <node x="729.25" y="1070.0">de.unistuttgart.kriegerreissner.bibliothek.exceptions.LibraryException</node>
-    <node x="807.0" y="1237.0">de.unistuttgart.kriegerreissner.bibliothek.exceptions.LendTimeExpiredException</node>
-    <node x="1686.0" y="1070.0">de.unistuttgart.kriegerreissner.bibliothek.bibUser.BibUserFactory</node>
-    <node x="0.0" y="972.0">de.unistuttgart.kriegerreissner.bibliothek.media.multimedia.Video</node>
-    <node x="555.0" y="972.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Paper</node>
-    <node x="955.0" y="972.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Jounal</node>
-    <node x="724.4652777777778" y="0.0">de.unistuttgart.kriegerreissner.bibliothek.media.Media</node>
-    <node x="331.0" y="1070.0">de.unistuttgart.kriegerreissner.bibliothek.library.Library</node>
-    <node x="123.75" y="367.0">de.unistuttgart.kriegerreissner.bibliothek.media.MultiMedia</node>
-    <node x="1754.0" y="972.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Newspaper</node>
-    <node x="0.0" y="1070.0">de.unistuttgart.kriegerreissner.bibliothek.bibUser.BibUser</node>
-    <node x="186.0" y="1582.0">de.unistuttgart.kriegerreissner.bibliothek.media.MediaStatus</node>
-    <node x="1358.0" y="972.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Book</node>
-    <node x="1142.75" y="345.0">de.unistuttgart.kriegerreissner.bibliothek.media.PrintMedia</node>
+    <node x="0.0" y="1488.0">de.unistuttgart.kriegerreissner.bibliothek.bibUser.BibUserGroup</node>
+    <node x="1137.0" y="1221.0">de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnknownException</node>
+    <node x="900.0" y="1488.0">de.unistuttgart.kriegerreissner.bibliothek.media.BookCoverType</node>
+    <node x="1381.0" y="1022.0">de.unistuttgart.kriegerreissner.bibliothek.library.BibUserManager</node>
+    <node x="272.0" y="924.0">de.unistuttgart.kriegerreissner.bibliothek.media.multimedia.Podcast</node>
+    <node x="887.5" y="1022.0">de.unistuttgart.kriegerreissner.bibliothek.exceptions.LibraryException</node>
+    <node x="0.0" y="924.0">de.unistuttgart.kriegerreissner.bibliothek.media.multimedia.Video</node>
+    <node x="835.0" y="1189.0">de.unistuttgart.kriegerreissner.bibliothek.exceptions.LendTimeExpiredException</node>
+    <node x="471.0" y="1488.0">de.unistuttgart.kriegerreissner.bibliothek.bibUser.BibUserFactory</node>
+    <node x="555.0" y="924.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Paper</node>
+    <node x="588.0" y="1221.0">de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnavailableException</node>
+    <node x="955.0" y="924.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Jounal</node>
+    <node x="755.9652777777778" y="0.0">de.unistuttgart.kriegerreissner.bibliothek.media.Media</node>
+    <node x="203.0" y="1488.0">de.unistuttgart.kriegerreissner.bibliothek.library.MediaManager</node>
+    <node x="331.0" y="1022.0">de.unistuttgart.kriegerreissner.bibliothek.library.Library</node>
+    <node x="1754.0" y="924.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Newspaper</node>
+    <node x="123.75" y="376.0">de.unistuttgart.kriegerreissner.bibliothek.media.MultiMedia</node>
+    <node x="0.0" y="1022.0">de.unistuttgart.kriegerreissner.bibliothek.bibUser.BibUser</node>
+    <node x="1730.0" y="1022.0">de.unistuttgart.kriegerreissner.bibliothek.library.MediaSearcher</node>
+    <node x="1086.0" y="1488.0">de.unistuttgart.kriegerreissner.bibliothek.media.MediaStatus</node>
+    <node x="1358.0" y="924.0">de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Book</node>
+    <node x="1142.75" y="343.0">de.unistuttgart.kriegerreissner.bibliothek.media.PrintMedia</node>
   </nodes>
   <notes />
   <edges>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Newspaper" target="de.unistuttgart.kriegerreissner.bibliothek.media.PrintMedia">
       <point x="0.0" y="-26.5" />
-      <point x="1958.5" y="942.0" />
-      <point x="1498.875" y="942.0" />
-      <point x="152.625" y="288.5" />
+      <point x="1958.5" y="894.0" />
+      <point x="1498.875" y="894.0" />
+      <point x="152.625" y="265.5" />
+    </edge>
+    <edge source="de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnavailableException" target="de.unistuttgart.kriegerreissner.bibliothek.exceptions.LibraryException">
+      <point x="0.0" y="-26.5" />
+      <point x="701.5" y="1164.0" />
+      <point x="917.0" y="1164.0" />
+      <point x="-59.0" y="58.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.PrintMedia" target="de.unistuttgart.kriegerreissner.bibliothek.media.Media">
-      <point x="0.0" y="-288.5" />
-      <point x="1346.25" y="320.0" />
-      <point x="931.4652777777778" y="320.0" />
-      <point x="69.0" y="147.5" />
+      <point x="0.0" y="-265.5" />
+      <point x="1346.25" y="318.0" />
+      <point x="915.7152777777778" y="318.0" />
+      <point x="53.25" y="146.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.multimedia.Video" target="de.unistuttgart.kriegerreissner.bibliothek.media.MultiMedia">
       <point x="0.0" y="-26.5" />
-      <point x="126.0" y="952.0" />
-      <point x="194.25" y="952.0" />
-      <point x="-70.5" y="266.5" />
+      <point x="126.0" y="904.0" />
+      <point x="194.25" y="904.0" />
+      <point x="-70.5" y="232.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.MultiMedia" target="de.unistuttgart.kriegerreissner.bibliothek.media.Media">
-      <point x="0.0" y="-266.5" />
-      <point x="264.75" y="320.0" />
-      <point x="793.4652777777778" y="320.0" />
-      <point x="-69.0" y="147.5" />
+      <point x="0.0" y="-232.5" />
+      <point x="264.75" y="318.0" />
+      <point x="809.2152777777778" y="318.0" />
+      <point x="-53.25" y="146.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Paper" target="de.unistuttgart.kriegerreissner.bibliothek.media.PrintMedia">
       <point x="0.0" y="-26.5" />
-      <point x="745.0" y="942.0" />
-      <point x="1193.625" y="942.0" />
-      <point x="-152.625" y="288.5" />
+      <point x="745.0" y="894.0" />
+      <point x="1193.625" y="894.0" />
+      <point x="-152.625" y="265.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnknownException" target="de.unistuttgart.kriegerreissner.bibliothek.exceptions.LibraryException">
       <point x="0.0" y="-26.5" />
-      <point x="687.5" y="1212.0" />
-      <point x="773.5" y="1212.0" />
-      <point x="-44.25" y="58.5" />
+      <point x="1236.5" y="1164.0" />
+      <point x="1035.0" y="1164.0" />
+      <point x="59.0" y="58.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Book" target="de.unistuttgart.kriegerreissner.bibliothek.media.PrintMedia">
       <point x="0.0" y="-26.5" />
-      <point x="1546.0" y="952.0" />
-      <point x="1397.125" y="952.0" />
-      <point x="50.875" y="288.5" />
+      <point x="1546.0" y="904.0" />
+      <point x="1397.125" y="904.0" />
+      <point x="50.875" y="265.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.exceptions.LendTimeExpiredException" target="de.unistuttgart.kriegerreissner.bibliothek.exceptions.LibraryException">
       <point x="0.0" y="-58.5" />
-      <point x="948.0" y="1212.0" />
-      <point x="862.0" y="1212.0" />
-      <point x="44.25" y="58.5" />
+      <point x="0.0" y="58.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.printmedia.Jounal" target="de.unistuttgart.kriegerreissner.bibliothek.media.PrintMedia">
       <point x="0.0" y="-26.5" />
-      <point x="1146.5" y="952.0" />
-      <point x="1295.375" y="952.0" />
-      <point x="-50.875" y="288.5" />
+      <point x="1146.5" y="904.0" />
+      <point x="1295.375" y="904.0" />
+      <point x="-50.875" y="265.5" />
     </edge>
     <edge source="de.unistuttgart.kriegerreissner.bibliothek.media.multimedia.Podcast" target="de.unistuttgart.kriegerreissner.bibliothek.media.MultiMedia">
       <point x="0.0" y="-26.5" />
-      <point x="403.5" y="952.0" />
-      <point x="335.25" y="952.0" />
-      <point x="70.5" y="266.5" />
+      <point x="403.5" y="904.0" />
+      <point x="335.25" y="904.0" />
+      <point x="70.5" y="232.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="991.2924300374854" y="766.5632915806495" />
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1121.9999999999995" y="990.7499999999998" />
   <SelectedNodes />
   <Categories>
-    <Category>Fields</Category>
-    <Category>Constructors</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
     <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
   </Categories>
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
