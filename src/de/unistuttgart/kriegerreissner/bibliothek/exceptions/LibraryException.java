@@ -10,6 +10,10 @@ public class LibraryException extends RuntimeException {
     /*@
      @ requires true;
      @*/
+
+    /**
+     * Initializes the a generic library exception without message
+     */
     public LibraryException() {
         super();
     }
@@ -17,6 +21,12 @@ public class LibraryException extends RuntimeException {
     /*@
      @ requires message != null;
      @*/
+
+    /**
+     * Initializes the a generic library exception with message
+     *
+     * @param message The message for the {@link LibraryException}
+     */
     public LibraryException(final String message) {
         super(message);
 

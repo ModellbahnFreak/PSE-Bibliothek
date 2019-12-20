@@ -4,7 +4,6 @@ import de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnavailableExc
 import de.unistuttgart.kriegerreissner.bibliothek.exceptions.MediaUnknownException;
 import de.unistuttgart.kriegerreissner.bibliothek.media.Media;
 
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -22,12 +21,17 @@ public class MediaManager {
      @ public instance invariant medias != null;
      @*/
 
-    private final Set<Media> medias = new HashSet<>();
+    private final Set<Media> medias;
+
+    public MediaManager(final Set<Media> media) {
+        this.medias = media;
+    }
 
     /*@
      @ requires media != null;
      @ ensures !this.medias.contains(media);
      @*/
+
     /**
      * <p>Removes the given media object from the library.</p>
      * <p>This method removes the given media object from the library, if it is owned by the library and currently
@@ -45,6 +49,7 @@ public class MediaManager {
      @ requires media != null;
      @ ensures this.medias.contains(media);
      @*/
+
     /**
      * <p>Adds a new media to the collection of the library</p>
      * <p>This method will add the given media to the collection of the library, given it is not already part of it.
@@ -61,6 +66,7 @@ public class MediaManager {
      @ requires media != null;
      @ pure;
      @*/
+
     /**
      * checks if the media is available
      *

@@ -52,6 +52,11 @@ public class Library {
     private final MediaSearcher searchTool;
 
     /**
+     * The object to care about initializing adding and removing media from and to the library.
+     */
+    private final MediaManager mediaManager;
+
+    /**
      * Instance of the user Manager, whiche cares about the users, so this class won't have to.
      */
     private final BibUserManager userManager;
@@ -71,6 +76,7 @@ public class Library {
      @ ensures searchTool != null;
      @ ensures userManager != null;
      @*/
+
     /**
      * <p>Initialized a library with the given display name.</p>
      * <p>The currentBalance is set to 0 and the inventory is initialized empty.</p>
@@ -98,6 +104,7 @@ public class Library {
      @ ensures searchTool != null;
      @ ensures userManager != null;
      @*/
+
     /**
      * <p>Initialized a library with the given display name and the given balance.</p>
      * <p>The libraries inventory is initialized empty.</p>
@@ -120,6 +127,7 @@ public class Library {
         this.availableMedia = new HashSet<>();
         this.searchTool = new MediaSearcher(this.inventory, this.availableMedia);
         this.userManager = new BibUserManager();
+        this.mediaManager = new MediaManager(this.inventory);
     }
 
     /*@
@@ -128,6 +136,7 @@ public class Library {
      @ ensures this.currentBalance == (\old(this.currentBalance) - amount);
      @ assignable currentBalance;
      */
+
     /**
      * <p>Removes the given amount of money from the current balance</p>
      * <p>If th balance is greater or equal the given amount, the given amount of money will be subtracted from the
